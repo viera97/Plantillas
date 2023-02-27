@@ -1,0 +1,123 @@
+%-----------------------------------------------------------------------
+% Beginning of mawrld-l-template.tex
+%-----------------------------------------------------------------------
+%
+% This is a template file for the Mathematical World series for use
+% with AMS-LaTeX 2.0.  Files for separate chapters should be included
+% at the appropriate position.
+%
+% Output from the MAWRLD-L document class differs greatly in appearance
+% from that produced by other AMS document classes; however, the input
+% is tagged the same for all, as described in the manual "AMS Author
+% Handbook, Monograph Classes", included in this package or available
+% from a link at
+%   http://www.ams.org/tex/amslatex.html
+%
+% Information regarding input for theorems can be found in the "AMS
+% theorem package user's guide" (amsthdoc.pdf), linked from the cited
+% web page.  For information regarding mathematical structures, see
+% the "amsmath user's guide"  texdoc amamath  or
+% http://mirror.ctan.org/tex-archive/macros/latex/required/amsmath/amsldoc.pdf
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{mawrld-l}
+
+%    For use when working on individual chapters
+%\includeonly{}
+
+%    Include referenced packages here.
+\usepackage{}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{section}{chapter}
+\numberwithin{equation}{chapter}
+
+%    For a single index; for multiple indexes, see the manual
+%    "AMS Author Handbook, Monograph Classes", included in the
+%    author package).
+\makeindex
+
+\begin{document}
+
+\frontmatter
+
+\title{}
+
+%    Remove any unused author tags.
+
+%    author one information
+\author{}
+\address{}
+\curraddr{}
+\email{}
+\thanks{}
+
+%    author two information
+\author{}
+\address{}
+\curraddr{}
+\email{}
+\thanks{}
+
+%    The 2020 edition of the Mathematics Subject Classification is
+%    the current definitive version.
+\subjclass[2020]{Primary }
+
+\keywords{}
+
+\begin{abstract}
+\end{abstract}
+
+\maketitle
+
+%    Dedication.  If the dedication is longer than a few lines,
+%    remove the centering instructions and the line break.
+%\cleardoublepage
+%\thispagestyle{empty}
+%\vspace*{13.5pc}
+%\begin{center}
+%  Dedication text (use \\[2pt] for line break if necessary)
+%\end{center}
+%\cleardoublepage
+
+%    Change page number to 7 if a dedication is present.
+\setcounter{page}{5}
+
+\tableofcontents
+
+%    Include unnumbered chapters (preface, acknowledgments, etc.) here.
+\include{}
+
+\mainmatter
+%    Include main chapters here.
+\include{}
+
+\appendix
+%    Include appendix "chapters" here.
+\include{}
+
+\backmatter
+%    Bibliography styles amsplain or author-year (using natbib) are
+%    also acceptable.
+\bibliographystyle{amsalpha}
+\bibliography{}
+%    See note above about multiple indexes.
+\printindex
+
+\end{document}
+
+%-----------------------------------------------------------------------
+% End of mawrld-l-template.tex
+%-----------------------------------------------------------------------
